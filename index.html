@@ -1,3 +1,9 @@
-<script>alert(1)</script>
+<script>
+const path = location.hash.slice(1)
+fetch(`${path}`)
+  .then(res => res.text())
+  .then(console.log)
+  .catch(console.error)
+</script>
 
 Hello World
